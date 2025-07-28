@@ -9,6 +9,7 @@ from app.core.auth import get_current_user, verify_password, create_access_token
 from app.core.config import settings
 import pandas as pd
 from io import BytesIO
+from app.utils.feature_extractor import extract_features
 
 router = APIRouter()
 
@@ -60,9 +61,11 @@ def upload_bank_statement(file: UploadFile = File(...), current_user: User = Dep
         if not set(["Date", "Description", "Amount", "Type"]).issubset(df.columns):
             raise HTTPException(status_code=422, detail="Invalid CSV format. Expected columns: Date, Description, Amount, Type.")
         
+        features = extract_features(df)
+        
         return{
             "message": "Bank Statement parsed successfully",
-            "sample": df.head(5).to_dict(orient="records")
+            "features": features
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
