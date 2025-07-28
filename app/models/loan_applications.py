@@ -13,4 +13,6 @@ class LoanApplication(Base):
     interest_rate = Column(Float, nullable=True)
     credit_score = Column(Float, nullable=True)
     created_at = Column(DateTime, default=datetime.now(timezone.utc))
-    user = relationship("User", back_populates="applications")
+
+    # Fully qualified string for lazy resolution
+    user = relationship("app.models.user.User", back_populates="applications")

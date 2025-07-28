@@ -1,0 +1,19 @@
+Date,Description,Amount,Type
+2024-07-01,Salary Credited,50000,Credit
+2024-07-02,ATM Withdrawal,-5000,Debit
+2024-07-03,Electricity Bill Payment,-2300,Debit
+2024-07-04,Amazon UPI Purchase,-1200,Debit
+2024-07-05,Loan EMI Payment,-7500,Debit
+2024-07-06,Swiggy Order,-500,Debit
+2024-07-07,Google Play Recharge,-150,Debit
+2024-07-08,UPI Received from Friend,1000,Credit
+2024-07-09,PhonePe Cashback,200,Credit
+2024-07-10,EMI Auto Debit,-7500,Debit
+2024-07-11,Zomato Order,-700,Debit
+2024-07-12,Freelance Payment,12000,Credit
+2024-07-13,Online Grocery,-3400,Debit
+2024-07-14,Gas Bill Payment,-800,Debit
+2024-07-15,Swiggy Instamart,-950,Debit
+2024-07-16,EMI Auto Debit,-7500,Debit
+2024-07-17,Netflix Subscription,-499,Debit
+2024-07-18,Paytm Add Money,5000,Credit
