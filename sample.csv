@@ -1,11 +1,14 @@
 Date,Description,Amount,Type
-2025-07-01,Salary,70000,Credit
-2025-07-03,Rent,-20000,Debit
-2025-07-05,Food,-5000,Debit
-2025-07-06,Netflix,-1000,Debit
-2025-07-10,Electricity Bill,-3000,Debit
-2025-07-15,EMI - iPhone,-4000,Debit
-2025-07-18,Gym,-1500,Debit
-2025-07-21,EMI - Bike,-6000,Debit
-2025-07-25,Freelance Payment,20000,Credit
-2025-07-27,Groceries,-2500,Debit
+2025-07-01,Salary,85000,Credit
+2025-07-02,Rent,-22000,Debit
+2025-07-04,Zomato Order,-3200,Debit
+2025-07-06,Amazon Prime,-1500,Debit
+2025-07-09,Electricity Bill,-2700,Debit
+2025-07-11,Petrol,-4000,Debit
+2025-07-14,EMI - Laptop,-5000,Debit
+2025-07-18,Freelance Payment,18000,Credit
+2025-07-20,Shopping - Myntra,-3000,Debit
+2025-07-22,EMI - Car,-8500,Debit
+2025-07-25,Gym Membership,-2000,Debit
+2025-07-27,Internet Bill,-1200,Debit
+2025-07-29,Groceries - BigBasket,-3500,Debit

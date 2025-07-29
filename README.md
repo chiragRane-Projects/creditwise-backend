@@ -1,12 +1,10 @@
 # 💳 CreditWise - AI-Powered Credit Risk System
 
-CreditWise is an AI-powered backend service that helps fintech apps assess creditworthiness based on real financial behavior. Built with **FastAPI**, **PostgreSQL**, and a trained **machine learning model**, it allows users to register, upload financial data, and get instant credit scores and application results.
+CreditWise is an AI-powered backend service that helps fintech apps assess creditworthiness based on real financial behavior. Built with **FastAPI**, and a trained **machine learning model**, upload financial data, and get instant credit scores and application results.
 
 ---
 
 ## 🚀 Features
-
-* 🔐 **JWT Auth System** – Secure user registration & login
 * 📥 **CSV Upload** – Upload transaction data for ML analysis
 * 🧠 **Credit Scoring ML Model** – Predicts creditworthiness with real features
 * 📊 **Feature Engineering** – Extracts monthly income, expense, savings rate, EMI count, etc.
@@ -17,7 +15,7 @@ CreditWise is an AI-powered backend service that helps fintech apps assess credi
 
 ## 🧠 Machine Learning (Overview)
 
-* **Model:** Logistic Regression
+* **Model:** RandomForestClassifier
 * **Target:** Predict whether a user is creditworthy (1 or 0)
 * **Features:**
 
@@ -36,17 +34,12 @@ CreditWise is an AI-powered backend service that helps fintech apps assess credi
 creditwise-backend/
 ├── app/
 │   ├── api/
-│   ├── core/
-│   ├── models/
-│   ├── schemas/
-│   ├── utils/
 ├── ml/
 │   ├── train_model.ipynb  # ML training logic
 │   └── credit_model.pkl   # Trained model
 ├── requirements.txt
 ├── run.py
 ├── sample.csv #sample csv file for testing
-├── create_tables.py #create tables in database
 ├── README.md
 ```
 
@@ -63,21 +56,6 @@ pip install -r requirements.txt
 python run.py
 ```
 
-PostgreSQL connection string must be configured in `.env` or `core/database.py`.
-
----
-
-## 🔐 Authentication
-
-* `POST /api/v1/user/register` – Register new user
-* `POST /api/v1/user/login` – Get JWT access token
-
-Include token in headers:
-
-```
-Authorization: Bearer <your-token>
-```
-
 ---
 
 ## 🧾 API Endpoints
@@ -89,14 +67,8 @@ Authorization: Bearer <your-token>
 
 **Input**
 
-```json
-{
-  "monthly_income": 60000,
-  "monthly_expense": 20000,
-  "savings_rate": 0.33,
-  "emi_count": 1,
-  "transaction_count": 42
-}
+```file
+Input the csv file in the same format as sample.csv in root of the directory
 ```
 
 **Output**
@@ -123,9 +95,6 @@ Authorization: Bearer <your-token>
 ## 📈 Tech Stack
 
 * **FastAPI** (Python Web Framework)
-* **PostgreSQL** (Relational Database)
-* **SQLAlchemy** (ORM)
-* **Pydantic** (Validation)
 * **scikit-learn** (ML)
 * **Pandas, NumPy** (Data)
 * **NextJS, Tailwind** (Frontend)
