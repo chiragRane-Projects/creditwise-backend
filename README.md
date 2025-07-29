@@ -107,7 +107,6 @@ Authorization: Bearer <your-token>
   "application_id": 2,
   "creditworthy": true,
   "confidence": 0.88,
-  "status": "pending"
 }
 ```
 
