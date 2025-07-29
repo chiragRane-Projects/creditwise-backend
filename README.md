@@ -1,4 +1,4 @@
-# 💳 CreditWise - AI-Powered Credit Risk & Loan Approval System
+# 💳 CreditWise - AI-Powered Credit Risk System
 
 CreditWise is an AI-powered backend service that helps fintech apps assess creditworthiness based on real financial behavior. Built with **FastAPI**, **PostgreSQL**, and a trained **machine learning model**, it allows users to register, upload financial data, and get instant credit scores and application results.
 
@@ -46,7 +46,7 @@ creditwise-backend/
 ├── requirements.txt
 ├── run.py
 ├── sample.csv #sample csv file for testing
-├── create_tables.py #create tables in ``database
+├── create_tables.py #create tables in database
 ├── README.md
 ```
 
