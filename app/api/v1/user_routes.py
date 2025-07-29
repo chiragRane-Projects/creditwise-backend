@@ -10,6 +10,7 @@ from app.core.config import settings
 import pandas as pd
 from io import BytesIO
 from app.utils.feature_extractor import extract_features
+from app.utils.ml_model import predict_credit_score
 
 router = APIRouter()
 
@@ -63,9 +64,12 @@ def upload_bank_statement(file: UploadFile = File(...), current_user: User = Dep
         
         features = extract_features(df)
         
+        score = predict_credit_score(features)
+        
         return{
             "message": "Bank Statement parsed successfully",
-            "features": features
+            "features": features,
+            "prediction": score
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
